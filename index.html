@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artopia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/eb549d5918.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Search Contestent</h1>
+            <div class="input-container">
+                <input type="text" id="ches-no-input" placeholder="Enter Ches no">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </header>
+    </div>
+    <div id="result-page">
+        <div class="top-bar">
+            <div class="name-bar">
+                <h2 id="ches-no-text"></h2>
+                <h2 id="con-name"></h2>
+            </div>
+            <div class="back-bar">
+                <h2 class="total-mark-text">Total: <span id="total-score"></span></h2>
+                <button id="back-btn" onclick="closeResultPage()">&Cross;</button>
+            </div>
+        </div>
+        <div class="marks">
+            <div class="stage-programs">
+                <h1>Stage<br><span>Programs</span></h1>
+                <div id="programs-box">
+                    <div class="stage-program-list">
+                        <div id="program-1-list">
+                            <h3 id="stage-program-1-name">none</h3>
+                            <h3 id="stage-program-1-rank">none</h3>
+                            <h3 id="stage-program-1-score">0</h3>
+                        </div>
+                        <div id="program-2-list">
+                            <h3 id="stage-program-2-name">none</h3>
+                            <h3 id="stage-program-2-rank">none</h3>
+                            <h3 id="stage-program-2-score">0</h3>
+                        </div>
+                        <div id="program-3-list">
+                            <h3 id="stage-program-3-name">none</h3>
+                            <h3 id="stage-program-3-rank">none</h3>
+                            <h3 id="stage-program-3-score">0</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stage-programs">
+                <h1>Non<br> Stage<br><span>Programs</span></h1>
+                <div id="programs-box">
+                    <div class="stage-program-list">
+                        <div id="program-1-list">
+                            <h3 id="nonstage-program-1-name">none</h3>
+                            <h3 id="nonstage-program-1-rank">none</h3>
+                            <h3 id="nonstage-program-1-score">0</h3>
+                        </div>
+                        <div id="prononstage-gram-2-list">
+                            <h3 id="nonstage-program-2-name">none</h3>
+                            <h3 id="nonstage-program-2-rank">none</h3>
+                            <h3 id="nonstage-program-2-score">0</h3>
+                        </div>
+                        <div id="prononstage-gram-3-list">
+                            <h3 id="nonstage-program-3-name">none</h3>
+                            <h3 id="nonstage-program-3-rank">none</h3>
+                            <h3 id="nonstage-program-3-score">0</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

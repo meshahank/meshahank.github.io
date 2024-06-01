@@ -1,0 +1,283 @@
+:root{
+    --team-color: #ffff70; 
+    --main-color: linear-gradient(to right, #667eea, #764ba2); 
+    --main-1-color: #667eea; 
+    --main-2-color: #764ba2; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.input-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #667eea;
+}
+
+#search-btn {
+    background: var(--main-1-color);
+    border: none;
+    color: #fff;
+    padding: 7px 18px;
+    border-radius:300px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#search-btn:hover {
+    background: var(--main-2-color);
+    transform: scale(1.05);
+}
+
+#result-page {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+.name-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.back-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+#ches-no-text {
+    padding: 7px 15px;
+    background: var(--team-color);
+    border-radius: 10px;
+}
+
+.total-mark-text {
+    padding: 7px 15px;
+    background: var(--team-color);
+    border-radius: 10px;
+}
+
+#back-btn {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background: none;
+    border: none;
+    font-size: 50px;
+    font-weight: bolder;
+    transition: transform 0.3s;
+}
+
+#back-btn:hover {
+    transform: rotate(180deg);
+}
+
+.marks {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    overflow-y: scroll;
+    height: 88vh;
+    padding: 300px 0 100px 0;
+    box-sizing: border-box;
+}
+
+.marks::-webkit-scrollbar {
+    width: 10px;
+}
+
+.marks::-webkit-scrollbar-track {
+    background: var(--scrollbar-bg);
+    border-radius: 10px;
+}
+
+.marks::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 10px;
+    border: 2px solid var(--scrollbar-bg);
+}
+
+.marks::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover);
+}
+
+.stage-programs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.stage-programs h1 {
+    font-size: 5rem;
+    line-height: 50px;
+    font-family: 'Poppins Extrabold', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0 0 50px 0;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+.stage-programs h1 span {
+    color: var(--team-color);
+    font-family: 'Poppins Black', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.274);
+}
+
+#programs-box {
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0px 0px 50px rgba(128, 123, 123, 0.467);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 20px;
+    transition: all 0.5s ease;
+}
+
+#programs-box:hover {
+    transform: translateY(-10px);
+}
+
+.stage-program-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.stage-program-list div {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 3%;
+    transition: all 0.3s;
+}
+
+.stage-program-list div:hover {
+    background: #ffffff;
+    padding: 3% 3% 3% 5%;
+    box-shadow: 0px 0px 50px rgba(128, 123, 123, 0.467);
+}
+
+#programs-box h3 {
+    width: 300px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 530px) {
+    .marks h1{
+        font-size: 4rem;
+    }
+    .back-bar {
+        flex-direction: row-reverse;
+    }
+    .total-mark-text {
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+}
+
+@media (max-height: 810px){
+    .marks{
+        padding: 300px 0 70px 0 ;
+    }
+}
+
+@media (max-height: 700px){
+    .marks{
+        padding: 400px 0 70px 0 ;
+    }
+}

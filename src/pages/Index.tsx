@@ -19,7 +19,7 @@ const Index = () => {
               <span className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></span>
               Available for new projects
             </div>
-            <h1 className="text-7xl md:text-8xl font-bold mb-8 bg-gradient-primary bg-clip-text text-transparent leading-tight text-display">
+            <h1 className="text-7xl md:text-8xl font-bold mb-8 text-primary leading-tight text-display">
               SHAHAN K
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed text-body-elegant">

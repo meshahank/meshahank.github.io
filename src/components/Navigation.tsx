@@ -8,9 +8,9 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Designs", path: "/designs" },
+    { name: "Designs", path: "/" },
     { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
   ];
 
   // Close mobile menu when route changes
@@ -41,13 +41,16 @@ const Navigation = () => {
           <div className="flex items-center justify-between gap-4 md:gap-24 px-2 md:px-10">
             <Link 
               to="/" 
-              className="text-lg md:text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent hover:scale-110 transition-all duration-300 text-display"
+              className="text-lg md:text-2xl font-bold text-primary hover:scale-110 transition-all duration-300 text-heading "
             >
+              {/* <img src="/public/icon.svg" alt="icon" style={
+                {height: '40px', width: '40px', display: 'inline-block', marginRight: '8px', verticalAlign: 'middle'}
+              }/> */}
               SHAHAN K
             </Link>
             
             {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
@@ -65,20 +68,22 @@ const Navigation = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            <button
-              className="md:hidden p-2 text-foreground/80 hover:text-foreground transition-colors duration-300"
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsMobileMenuOpen(!isMobileMenuOpen);
-              }}
-              aria-label="Toggle mobile menu"
-            >
-              {isMobileMenuOpen ? (
-                <X className="h-5 w-5" />
-              ) : (
-                <Menu className="h-5 w-5" />
-              )}
-            </button>
+            <div className="md:hidden flex items-center">
+              <button
+                className="p-2 text-foreground/80 hover:text-foreground transition-colors duration-300"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsMobileMenuOpen(!isMobileMenuOpen);
+                }}
+                aria-label="Toggle mobile menu"
+              >
+                {isMobileMenuOpen ? (
+                  <X className="h-5 w-5" />
+                ) : (
+                  <Menu className="h-5 w-5" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </nav>

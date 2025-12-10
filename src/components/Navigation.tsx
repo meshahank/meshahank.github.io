@@ -35,8 +35,8 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="border border-gray-200 m-3 min-w-fit rounded-2xl shadow-2xl sticky top-3 z-50 mx-auto flex gap-2 md:gap-10 px-2 md:px-4 py-0 items-center justify-center"
-          style={{ backdropFilter: 'saturate(180%) blur(20px)', width: 'fit-content', borderRadius: '1.5rem' }}>
+      <nav className="border border-gray-100 m-3 min-w-fit rounded-2xl shadow-2xl sticky top-3 z-50 mx-auto flex gap-2 md:gap-10 px-2 md:px-4 py-0 items-center justify-center"
+          style={{ backdropFilter: 'saturate(180%) blur(20px)', width: 'fit-content', borderRadius: '1.5rem' , border: '1px solid #d3d3d333' }}>  
         <div className="container mx-auto px-2 md:px-6 py-4">
           <div className="flex items-center justify-between gap-4 md:gap-24 px-2 md:px-10">
             <Link 

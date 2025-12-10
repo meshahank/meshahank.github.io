@@ -1,12 +1,28 @@
 import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import Navigation from "@/components/Navigation";
-import design1 from "@/assets/d1.jpg";
-import design2 from "@/assets/d2.jpg";
-import design3 from "@/assets/d3.jpg";
-import design4 from "@/assets/d4.jpg";
-import design5 from "@/assets/d5.jpg";
-import design6 from "@/assets/d6.jpg";
+import design1 from "@/assets/1.jpg";
+import design2 from "@/assets/2.jpg";
+import design3 from "@/assets/3.jpg";
+import design4 from "@/assets/4.jpg";
+import design5 from "@/assets/5.jpg";
+import design6 from "@/assets/6.jpg";
+import design7 from "@/assets/7.jpg";
+import design8 from "@/assets/8.jpg";
+import design9 from "@/assets/9.jpg";
+import design10 from "@/assets/10.jpg";
+import design11 from "@/assets/11.jpg";
+import design12 from "@/assets/12.jpg";
+import design13 from "@/assets/13.jpg";
+import design14 from "@/assets/14.jpg";
+import design15 from "@/assets/15.jpg";
+import design16 from "@/assets/16.jpg";
+import design17 from "@/assets/17.jpg";
+import design18 from "@/assets/18.jpg";
+import design19 from "@/assets/19.jpg";
+import design20 from "@/assets/20.jpg";
+import design21 from "@/assets/ningal.jpg";
+
 interface DesignItem {
   id: number;
   title: string;
@@ -15,14 +31,36 @@ interface DesignItem {
   height: number;
 }
 
-const designsData: DesignItem[] = [
-  { id: 1, title: "100 Days, 100 Designs", category: "Poster design", image: design1, height: 300 },
-  { id: 2, title: "Creative minds in motion", category: "Poster design", image: design2, height: 450 },
-  { id: 3, title: "Madina poster", category: "Poster design", image: design3, height: 400 },
-  { id: 4, title: "Coming soon", category: "Poster design", image: design4, height: 250 },
-  { id: 5, title: "Daily Quest", category: "Poster design", image: design5, height: 300 },
-  { id: 6, title: "Caption clash", category: "Poster design", image: design6, height: 400 },
+// Base design data without manual IDs
+const baseDesignsData = [
+  { title: "100 Days, 100 Designs", category: "Poster Design", image: design1, height: 300 },
+  { title: "Creative Minds in Motion", category: "Poster Design", image: design2, height: 450 },
+  { title: "Jaizathu hibbi rasool", category: "Poster Design", image: design3, height: 400 },
+  { title: "Coming Soon", category: "Poster Design", image: design4, height: 250 },
+  { title: "Daily Quest", category: "Poster Design", image: design5, height: 300 },
+  { title: "Caption Clash", category: "Poster Design", image: design6, height: 400 },
+  { title: "Poster Designistry", category: "Poster Design", image: design7, height: 350 },
+  { title: "COSMOS", category: "Campaign poster", image: design8, height: 280 },
+  { title: "Course details", category: "Poster Design", image: design9, height: 420 },
+  { title: "Excellence details", category: "Poster Design", image: design10, height: 320 },
+  { title: "ASAs excellence", category: "Poster Design", image: design11, height: 450 },
+  { title: "Hadia herald", category: "Poster Design", image: design12, height: 310 },
+  { title: "Karate team", category: "Poster Design", image: design13, height: 290 },
+  { title: "Belt awarding ceremony", category: "Poster Design", image: design14, height: 360 },
+  { title: "Kerala Piravi", category: "Poster Design", image: design15, height: 330 },
+  { title: "Creative minds in motion", category: "Poster Design", image: design16, height: 410 },
+  { title: "Operation MEAU", category: "Campaign poster", image: design17, height: 300 },
+  { title: "Padachonte duniyav", category: "Poster Design", image: design18, height: 450 },
+  { title: "Saidul ayath", category: "Poster Design", image: design19, height: 390 },
+  { title: "Ultrascroll", category: "Poster Design", image: design20, height: 390 },
+  { title: "Ningal nireekshanathilaan", category: "Poster Design", image: design21, height: 450 },
 ];
+
+// Auto-generate IDs based on array index
+const designsData: DesignItem[] = baseDesignsData.map((design, index) => ({
+  id: index + 1,
+  ...design,
+}));
 
 const Designs = () => {
   const [designs, setDesigns] = useState<DesignItem[]>([]);
@@ -103,7 +141,7 @@ const Designs = () => {
               My Designs
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              A collection of creative works spanning digital art, branding, and user experience design.
+              A collection of creative works spanning Poster Design, Poster Design, and user experience design.
             </p>
             <div className="mt-6 md:mt-8">
               <a
